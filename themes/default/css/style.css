@@ -1,0 +1,679 @@
+@font-face {
+	font-family: Uthman;
+	src: url('https://static.aftab.cc/fonts/UthmanTN.otf');
+}
+
+@font-face {
+	font-family: Vazir;
+	src: url('../fonts/Vazirmatn-Regular.woff2');
+	
+}
+
+@font-face {
+	font-family: Vazir;
+	src: url('../fonts/Vazirmatn-Bold.woff2');
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: Samim;
+	src: url('../fonts/Vazirmatn-FD-Regular.woff2');
+}
+
+@font-face {
+    font-family: Shabnam;
+	src: url('../fonts/Shabnam-FD.woff2');
+}
+
+@font-face {
+    font-family: Sahel;
+	src: url('../fonts/Sahel-FD.woff2');
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	direction: rtl;
+	font-size: 20px;
+}
+
+body{
+	text-align: center;
+	font-family: Vazir;
+	background-color: #3498db;
+/*	background-color: #484848;*/
+	transition: all 250ms;
+}
+
+main{
+	width: 95%;
+	max-width: 750px;
+	margin: 0 auto;
+	background-color: white;
+/*	background-color: #0e2338;*/
+	min-height: 900px;
+	border-radius: 6px;
+	transition: all 250ms;
+}
+
+footer{
+	letter-spacing: 2px;
+	font-size: 15px;
+	text-align: center;
+	color: #3498db;
+}
+
+a{
+	text-decoration: none;
+
+}
+
+blockquote{
+	transition: all 250ms;
+}
+
+#intro{
+	font-size: 15px;
+	letter-spacing: 1px;
+/*	color: #3498db;*/
+}
+
+
+.mt-6{
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+}
+
+#hafez{
+	color: rgb(220, 53, 69);
+}
+
+.alert-primary{
+	border-radius: 0px !important;
+}
+
+.text-bg-primary{
+	font-size: 18px;
+}
+
+.btn-outline-primary{
+	width: 100%;
+	border-radius: 2px;
+}
+
+.btn-outline-danger{
+	width: 100%;
+	border-radius: 2px;
+}
+
+#fal{
+	border: solid #198754 1px;
+	width: 100%;
+	border-radius: 2px;
+	background-color: white;
+	color: #198754;
+	padding: 7.5px 15px;
+	transition: all 250ms;
+}
+
+#fal:hover{
+	background-color: #198754;
+	color: white;
+}
+
+#title{
+	color: #20c997;
+}
+
+#search{
+	width: 100%;
+	background-color: white;
+	border: solid #ffc107 1px;
+	color: #ffc107;
+	padding: 7.5px 15px;
+}
+
+#search:hover{
+	background-color: #ffc107;
+	color: white;
+}
+
+#titleSearch{
+	color: #20c997;
+}
+
+#hafezSearch{
+	color: rgb(220, 53, 69);
+}
+
+#home{
+	text-align: center;
+}
+
+.besmeAllah{
+	font-family: Uthman;
+	font-size: 18px;
+	transition: all 250ms;
+}
+
+.btn-outline-success{
+	width: 100%;
+	border-radius: 2px;
+}
+
+#btnShow{
+	border: solid #0dcaf0 1px;
+	border-radius: 2px;
+	width: 2px;
+	color: #0dcaf0;
+	width: 100%;
+	background-color: white;
+	padding: 7.5px 15px;
+}
+
+#btnShow:hover{
+	background-color: #0dcaf0;
+	color: white;
+}
+
+#titleShow{
+	color: #20c997;
+}
+
+#hafezShow{
+	color: rgb(220, 53, 69);
+}
+
+#next,#prev{
+	font-size: 0.72rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+}
+
+#next:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#prev:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#btnHome{
+	font-size: 20px;
+	border: 1px solid #6c757d;
+	background-color: #6c757d;
+	color: white;
+	border-radius: 4px;
+	list-style-type: none;
+}
+
+#searchShow{
+	width: 100%;
+	border-radius: 2px;
+	background-color: white;
+	color: #ffc107;
+	border: 1px #ffc107 solid;
+	padding: 7.5px 15px;
+	transition: all 250ms;
+}
+
+#searchShow:hover{
+	background-color: #ffc107;
+	color: white;
+}
+
+.btn-outline-warning{
+	width: 100%;
+	border-radius: 1px;
+}
+
+.btn-outline-warning:hover{
+	color: white;
+}
+
+.btn-primary{
+	width: 100%;
+	border-radius: 1px;
+}
+
+.btn-danger{
+	width: 100%;
+	border-radius: 1px;
+}
+
+.btn-success{
+	width: 100%;
+	border-radius: 1px;
+}
+
+#nextsaadi,#prevsaadi{
+	font-size: 0.72rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+}
+
+#nextsaadi:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#prevsaadi:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#btnHomesaadi{
+	font-size: 20px;
+	border: 1px solid #6c757d;
+	background-color: #6c757d;
+	color: white;
+	border-radius: 4px;
+	list-style-type: none;
+}
+
+.home{
+	color: white;
+}
+
+#titlesaadi{
+	color: #20c997;
+}
+
+#saadi{
+	color: rgb(220, 53, 69);
+}
+
+#searchsaadi{
+	width: 100%;
+	background-color: white;
+	border: solid #ffc107 1px;
+	color: #ffc107;
+	padding: 7.5px 15px;
+	transition: all 250ms;
+}
+
+#searchsaadi:hover{
+	background-color: #ffc107;
+	color: white;
+}
+
+#show-molana{
+	width: 100%;
+	color: white;
+	background-color: #ffc107;
+	border-radius: 1px;
+	border: 1px #ffc107 solid;
+	padding: 7.5px 15px;
+}
+
+#fa-molana{
+	background-color: #0dcaf0;
+	width: 100%;
+	color: white;
+	border-radius: 1px;
+	border: 1px solid #0dcaf0;
+	padding: 7.5px 15px;
+}
+
+#fal-result{
+	background-color: white;
+	border: 1px solid #198754;
+	color: #198754;
+	width: 100%;
+	padding: 7.5px 15px;
+	transition: all 250ms;
+}
+
+#fal-result:hover{
+	color: white;
+	background-color: #198754;
+}
+
+#titleMolana{
+	color: #20c997;
+}
+
+#molana{
+	color: rgb(220, 53, 69);
+}
+
+#title-show{
+	color: #20c997;
+}
+
+#molana-show{
+	color: rgb(220, 53, 69);
+}
+
+#btnHomeMolana{
+	font-size: 20px;
+	border: 1px solid #6c757d;
+	background-color: #6c757d;
+	color: white;
+	border-radius: 4px;
+	list-style-type: none;
+}
+
+#nextMolana,#prevMolana{
+	font-size: 0.72rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+}
+
+#nextMolana:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#prevMolana:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#searchMolana{
+	width: 100%;
+	background-color: white;
+	border: solid #ffc107 1px;
+	color: #ffc107;
+	padding: 7.5px 15px;
+	transition: 250ms all;
+}
+
+#searchMolana:hover{
+	background-color: #ffc107;
+	color: white;
+}
+
+#titlekhayam{
+	color: #20c997;
+}
+
+#khayam{
+	color: rgb(220, 53, 69);	
+}
+
+#searchkhayam{
+	width: 100%;
+	background-color: white;
+	border: solid #ffc107 1px;
+	color: #ffc107;
+	padding: 7.5px 15px;
+	transition: all 250ms;
+}
+
+#searchkhayam:hover{
+	background-color: #ffc107;
+	color: white;
+}
+
+#nextkhayam,#prevkhayam{
+	font-size: 0.72rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+}
+
+#nextkhayam:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#prevkhayam:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#btnHomekhayam{
+	font-size: 20px;
+	border: 1px solid #6c757d;
+	background-color: #6c757d;
+	color: white;
+	border-radius: 4px;
+	list-style-type: none;
+}
+
+#search-tool{
+	padding: 0;
+}
+
+.status-moon{
+	display: block;
+}
+
+#zoom-in,#zoom-out,#fullscreen,#search-tool,.status-moon,#font-tool{
+	font-size: 0.9rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+	padding: 4px 10px !important;
+	transition: all 250ms;
+}
+
+#zoom-in:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#zoom-out:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#search-tool:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#fullscreen:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+.status-moon{
+	font-size: 0.8rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.status-moon:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+.status-sun{
+	font-size: 0.8rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+	display: inline-block;
+	padding: 2.2px !important;
+}
+
+.status-sun:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+#clock{
+	font-size: 1em;
+	color: #333;
+	text-align: center;
+	padding: 6px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.status-moon{
+	font-size: 0.875rem;
+	background-color: white;
+	color: #6c757d;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.status-sun{
+	font-size: 0.875rem;
+	background-color: white;
+	color: #6c757d;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.tools{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+	text-align: center;
+}
+
+#arthor{
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+#font-tool{
+	position: relative;
+	font-size: 0.9rem;
+	border: 1px solid #6c757d;
+	background-color: white;
+	color: #6c757d;
+	border-radius: 4px;
+}
+
+#font-tool:hover{
+	background-color: #6c757d;
+	color: white;
+}
+
+.btn-top{
+	width: 40px;
+	height: 40px;
+	display: none;
+	border-radius: 2px;
+	position: fixed;
+	bottom: 5px;
+	right: 8px;
+	cursor: pointer;
+	color: #fff !important;
+	font-size: 1rem;
+	z-index: 1000;
+}
+
+.btn-top-parent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.status-sun{
+	display: block;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.btn{
+	transition: all 250ms;
+}
+
+.section__edit{
+	z-index: 99999;
+	width: 300px;
+	border-radius: 5px;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 5px;
+	height: 40px;
+	justify-content: center;
+	flex-direction: row;
+	bottom: -60px;
+	display: flex;
+	gap: 6px;
+	transition: all 500ms;
+}
+
+.edit__input{
+	display: block;
+	width: 100%;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #dee2e6;
+	border-radius: 0.375rem;
+	box-shadow: 0 1px 10px #bce3f5;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.edit__input:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 1px 10px #74cef8;
+}
+
+.edit-2{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	padding: 5px;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	box-shadow: 0 1px 10px #bce3f5;
+	color: #989b9d;
+	transition: all 0.5s;
+	border: 2px solid #fff;
+	display: block;
+	position: relative;
+}
+
+.edit-2:hover{
+	box-shadow: 0 1px 10px #74cef8;
+}
+
+.edit__edit:hover{
+	color: #455A64;
+}
+
+.edit__close:hover{
+	color: #D32F2F;
+}
+
+.edit__close svg, .edit__edit svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: block;
+	width: 21px;
+	height: 21px;
+}
