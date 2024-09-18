@@ -67,7 +67,6 @@ footer{
 
 a{
 	text-decoration: none;
-
 }
 
 blockquote{
@@ -451,7 +450,13 @@ blockquote{
 	display: block;
 }
 
-#zoom-in,#zoom-out,#fullscreen,#search-tool,.status-moon,#font-tool{
+#zoom-in,
+#zoom-out,
+#fullscreen,
+#search-tool,
+.status-moon,
+#font-tool,
+#translate{
 	font-size: 0.9rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -676,4 +681,9 @@ blockquote{
 	display: block;
 	width: 21px;
 	height: 21px;
+}
+
+#translate:hover{
+	background-color: #6c757d;
+	color: white;
 }
