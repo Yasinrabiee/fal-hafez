@@ -6,7 +6,7 @@
 @font-face {
 	font-family: Vazir;
 	src: url('../fonts/Vazirmatn-Regular.woff2');
-
+	
 }
 
 @font-face {
@@ -16,98 +16,118 @@
 }
 
 @font-face {
-	font-family: Samim;
+    font-family: Samim;
 	src: url('../fonts/Vazirmatn-FD-Regular.woff2');
 }
 
 @font-face {
-	font-family: Shabnam;
+    font-family: Shabnam;
 	src: url('../fonts/Shabnam-FD.woff2');
 }
 
 @font-face {
-	font-family: Sahel;
+    font-family: Sahel;
 	src: url('../fonts/Sahel-FD.woff2');
 }
 
-* {
+*{
 	box-sizing: border-box;
 }
 
-html {
+html{
 	direction: rtl;
 	font-size: 20px;
 }
 
-body {
+body{
 	text-align: center;
 	font-family: Vazir;
-	background-color: #3498db;
-	/*	background-color: #484848;*/
+	background-color: var(--bgc-body);
+	color: var(--color-body);
 	transition: all 250ms;
 }
 
-main {
+body{
+	--bgc-main: #fff;
+	--bgc-body: #3498db;
+	--color-body: #000000;
+	--color-status: #000000;
+	--color-besmelah: #000000;
+	--color-poem: #000000;
+	--color-blockquote: #000000;
+}
+
+/*body.dark{
+	--bgc-main: #fff !important;
+	--bgc-body: #3498db !important;
+	--color-body: #fff !important;
+	--color-status: #fff !important;
+	--color-besmelah: #fff !important;
+	--color-poem: #fff !important;
+	--color-blockquote: #fff !important;
+}*/
+
+main{
 	width: 95%;
 	max-width: 750px;
 	margin: 0 auto;
-	background-color: white;
-	/*	background-color: #0e2338;*/
+	background-color: var(--bgc-main);
 	min-height: 900px;
 	border-radius: 6px;
 	transition: all 250ms;
 }
 
-footer {
+footer{
 	letter-spacing: 2px;
 	font-size: 15px;
 	text-align: center;
 	color: #3498db;
 }
 
-a {
+a{
 	text-decoration: none;
 }
 
-blockquote {
+blockquote{
 	transition: all 250ms;
+	color: var(--color-blockquote);
 }
 
-#intro {
+#intro{
 	font-size: 15px;
 	letter-spacing: 1px;
-	/*	color: #3498db;*/
+/*	color: #3498db;*/
 }
 
 
-.mt-6 {
+.mt-6{
 	margin-top: 1rem !important;
 	margin-bottom: 1rem !important;
 }
 
-#hafez {
+#hafez{
 	color: rgb(220, 53, 69);
 }
 
-.alert-primary {
+.alert-primary{
 	border-radius: 0px !important;
 }
 
-.text-bg-primary {
+.text-bg-primary{
 	font-size: 18px;
 }
 
-.btn-outline-primary {
+.btn-outline-primary{
 	width: 100%;
 	border-radius: 2px;
 }
 
-.btn-outline-danger {
+.btn-outline-danger{
 	width: 100%;
 	border-radius: 2px;
 }
 
-#fal {
+#fal{
 	border: solid #198754 1px;
 	width: 100%;
 	border-radius: 2px;
@@ -117,16 +137,16 @@ blockquote {
 	transition: all 250ms;
 }
 
-#fal:hover {
+#fal:hover{
 	background-color: #198754;
 	color: white;
 }
 
-#title {
+#title{
 	color: #20c997;
 }
 
-#search {
+#search{
 	width: 100%;
 	background-color: white;
 	border: solid #ffc107 1px;
@@ -134,35 +154,36 @@ blockquote {
 	padding: 7.5px 15px;
 }
 
-#search:hover {
+#search:hover{
 	background-color: #ffc107;
 	color: white;
 }
 
-#titleSearch {
+#titleSearch{
 	color: #20c997;
 }
 
-#hafezSearch {
+#hafezSearch{
 	color: rgb(220, 53, 69);
 }
 
-#home {
+#home{
 	text-align: center;
 }
 
-.besmeAllah {
+.besmeAllah{
 	font-family: Uthman;
 	font-size: 18px;
 	transition: all 250ms;
+	color: var(--color-besmelah);
 }
 
-.btn-outline-success {
+.btn-outline-success{
 	width: 100%;
 	border-radius: 2px;
 }
 
-#btnShow {
+#btnShow{
 	border: solid #0dcaf0 1px;
 	border-radius: 2px;
 	width: 2px;
@@ -172,21 +193,20 @@ blockquote {
 	padding: 7.5px 15px;
 }
 
-#btnShow:hover {
+#btnShow:hover{
 	background-color: #0dcaf0;
 	color: white;
 }
 
-#titleShow {
+#titleShow{
 	color: #20c997;
 }
 
-#hafezShow {
+#hafezShow{
 	color: rgb(220, 53, 69);
 }
 
-#next,
-#prev {
+#next,#prev{
 	font-size: 0.72rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -194,17 +214,17 @@ blockquote {
 	border-radius: 4px;
 }
 
-#next:hover {
+#next:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#prev:hover {
+#prev:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#btnHome {
+#btnHome{
 	font-size: 20px;
 	border: 1px solid #6c757d;
 	background-color: #6c757d;
@@ -213,7 +233,7 @@ blockquote {
 	list-style-type: none;
 }
 
-#searchShow {
+#searchShow{
 	width: 100%;
 	border-radius: 2px;
 	background-color: white;
@@ -223,37 +243,36 @@ blockquote {
 	transition: all 250ms;
 }
 
-#searchShow:hover {
+#searchShow:hover{
 	background-color: #ffc107;
 	color: white;
 }
 
-.btn-outline-warning {
+.btn-outline-warning{
 	width: 100%;
 	border-radius: 1px;
 }
 
-.btn-outline-warning:hover {
+.btn-outline-warning:hover{
 	color: white;
 }
 
-.btn-primary {
+.btn-primary{
 	width: 100%;
 	border-radius: 1px;
 }
 
-.btn-danger {
+.btn-danger{
 	width: 100%;
 	border-radius: 1px;
 }
 
-.btn-success {
+.btn-success{
 	width: 100%;
 	border-radius: 1px;
 }
 
-#nextsaadi,
-#prevsaadi {
+#nextsaadi,#prevsaadi{
 	font-size: 0.72rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -261,17 +280,17 @@ blockquote {
 	border-radius: 4px;
 }
 
-#nextsaadi:hover {
+#nextsaadi:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#prevsaadi:hover {
+#prevsaadi:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#btnHomesaadi {
+#btnHomesaadi{
 	font-size: 20px;
 	border: 1px solid #6c757d;
 	background-color: #6c757d;
@@ -280,19 +299,19 @@ blockquote {
 	list-style-type: none;
 }
 
-.home {
+.home{
 	color: white;
 }
 
-#titlesaadi {
+#titlesaadi{
 	color: #20c997;
 }
 
-#saadi {
+#saadi{
 	color: rgb(220, 53, 69);
 }
 
-#searchsaadi {
+#searchsaadi{
 	width: 100%;
 	background-color: white;
 	border: solid #ffc107 1px;
@@ -301,12 +320,12 @@ blockquote {
 	transition: all 250ms;
 }
 
-#searchsaadi:hover {
+#searchsaadi:hover{
 	background-color: #ffc107;
 	color: white;
 }
 
-#show-molana {
+#show-molana{
 	width: 100%;
 	color: white;
 	background-color: #ffc107;
@@ -315,7 +334,7 @@ blockquote {
 	padding: 7.5px 15px;
 }
 
-#fa-molana {
+#fa-molana{
 	background-color: #0dcaf0;
 	width: 100%;
 	color: white;
@@ -324,7 +343,7 @@ blockquote {
 	padding: 7.5px 15px;
 }
 
-#fal-result {
+#fal-result{
 	background-color: white;
 	border: 1px solid #198754;
 	color: #198754;
@@ -333,28 +352,28 @@ blockquote {
 	transition: all 250ms;
 }
 
-#fal-result:hover {
+#fal-result:hover{
 	color: white;
 	background-color: #198754;
 }
 
-#titleMolana {
+#titleMolana{
 	color: #20c997;
 }
 
-#molana {
+#molana{
 	color: rgb(220, 53, 69);
 }
 
-#title-show {
+#title-show{
 	color: #20c997;
 }
 
-#molana-show {
+#molana-show{
 	color: rgb(220, 53, 69);
 }
 
-#btnHomeMolana {
+#btnHomeMolana{
 	font-size: 20px;
 	border: 1px solid #6c757d;
 	background-color: #6c757d;
@@ -363,8 +382,7 @@ blockquote {
 	list-style-type: none;
 }
 
-#nextMolana,
-#prevMolana {
+#nextMolana,#prevMolana{
 	font-size: 0.72rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -372,17 +390,17 @@ blockquote {
 	border-radius: 4px;
 }
 
-#nextMolana:hover {
+#nextMolana:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#prevMolana:hover {
+#prevMolana:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#searchMolana {
+#searchMolana{
 	width: 100%;
 	background-color: white;
 	border: solid #ffc107 1px;
@@ -391,20 +409,20 @@ blockquote {
 	transition: 250ms all;
 }
 
-#searchMolana:hover {
+#searchMolana:hover{
 	background-color: #ffc107;
 	color: white;
 }
 
-#titlekhayam {
+#titlekhayam{
 	color: #20c997;
 }
 
-#khayam {
-	color: rgb(220, 53, 69);
+#khayam{
+	color: rgb(220, 53, 69);	
 }
 
-#searchkhayam {
+#searchkhayam{
 	width: 100%;
 	background-color: white;
 	border: solid #ffc107 1px;
@@ -413,13 +431,12 @@ blockquote {
 	transition: all 250ms;
 }
 
-#searchkhayam:hover {
+#searchkhayam:hover{
 	background-color: #ffc107;
 	color: white;
 }
 
-#nextkhayam,
-#prevkhayam {
+#nextkhayam,#prevkhayam{
 	font-size: 0.72rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -427,17 +444,17 @@ blockquote {
 	border-radius: 4px;
 }
 
-#nextkhayam:hover {
+#nextkhayam:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#prevkhayam:hover {
+#prevkhayam:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#btnHomekhayam {
+#btnHomekhayam{
 	font-size: 20px;
 	border: 1px solid #6c757d;
 	background-color: #6c757d;
@@ -446,11 +463,11 @@ blockquote {
 	list-style-type: none;
 }
 
-#search-tool {
+#search-tool{
 	padding: 0;
 }
 
-.status-moon {
+.status-moon{
 	display: block;
 }
 
@@ -460,7 +477,7 @@ blockquote {
 #search-tool,
 .status-moon,
 #font-tool,
-#translate {
+#translate{
 	font-size: 0.9rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -470,27 +487,27 @@ blockquote {
 	transition: all 250ms;
 }
 
-#zoom-in:hover {
+#zoom-in:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#zoom-out:hover {
+#zoom-out:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#search-tool:hover {
+#search-tool:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#fullscreen:hover {
+#fullscreen:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-.status-moon {
+.status-moon{
 	font-size: 0.8rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -499,12 +516,12 @@ blockquote {
 	display: inline-block;
 }
 
-.status-moon:hover {
+.status-moon:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-.status-sun {
+.status-sun{
 	font-size: 0.8rem;
 	border: 1px solid #6c757d;
 	background-color: white;
@@ -514,12 +531,12 @@ blockquote {
 	padding: 2.2px !important;
 }
 
-.status-sun:hover {
+.status-sun:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-#clock {
+#clock{
 	font-size: 1em;
 	color: #333;
 	text-align: center;
@@ -528,7 +545,7 @@ blockquote {
 	display: inline-block;
 }
 
-.status-moon {
+.status-moon{
 	font-size: 0.875rem;
 	background-color: white;
 	color: #6c757d;
@@ -537,7 +554,7 @@ blockquote {
 	padding-right: 10px;
 }
 
-.status-sun {
+.status-sun{
 	font-size: 0.875rem;
 	background-color: white;
 	color: #6c757d;
@@ -546,22 +563,21 @@ blockquote {
 	padding-right: 10px;
 }
 
-.tools {
+.tools{
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	gap: 10px;
 	justify-content: center;
 	text-align: center;
 }
 
-#arthor {
+#arthor{
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
 }
 
-#font-tool {
+#font-tool{
 	position: relative;
 	font-size: 0.9rem;
 	border: 1px solid #6c757d;
@@ -570,12 +586,12 @@ blockquote {
 	border-radius: 4px;
 }
 
-#font-tool:hover {
+#font-tool:hover{
 	background-color: #6c757d;
 	color: white;
 }
 
-.btn-top {
+.btn-top{
 	width: 40px;
 	height: 40px;
 	display: none;
@@ -589,23 +605,23 @@ blockquote {
 	z-index: 1000;
 }
 
-.btn-top-parent {
+.btn-top-parent{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.status-sun {
+.status-sun{
 	display: block;
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
-.btn {
+.btn{
 	transition: all 250ms;
 }
 
-.section__edit {
+.section__edit{
 	z-index: 99999;
 	width: 300px;
 	border-radius: 5px;
@@ -622,7 +638,7 @@ blockquote {
 	transition: all 500ms;
 }
 
-.edit__input {
+.edit__input{
 	display: block;
 	width: 100%;
 	padding: .375rem .75rem;
@@ -649,7 +665,7 @@ blockquote {
 	box-shadow: 0 1px 10px #74cef8;
 }
 
-.edit-2 {
+.edit-2{
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
@@ -666,30 +682,37 @@ blockquote {
 	position: relative;
 }
 
-.edit-2:hover {
+.edit-2:hover{
 	box-shadow: 0 1px 10px #74cef8;
 }
 
-.edit__edit:hover {
+.edit__edit:hover{
 	color: #455A64;
 }
 
-.edit__close:hover {
+.edit__close:hover{
 	color: #D32F2F;
 }
 
-.edit__close svg,
-.edit__edit svg {
+.edit__close svg, .edit__edit svg{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%,-50%);
 	display: block;
 	width: 21px;
 	height: 21px;
 }
 
-#translate:hover {
+#translate:hover{
 	background-color: #6c757d;
 	color: white;
+}
+
+.status{
+	color: var(--color-status);
+}
+
+.poem-text{
+	color: var(--color-poem);
 }

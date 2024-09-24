@@ -1,4 +1,5 @@
 let ghazal = 0;
+$(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
 $(`#titlesaadi`).html(`
   ${saadi[ghazal]["Title"]}<br>
   `);
@@ -49,32 +50,37 @@ $(`#prevsaadi`).click(function () {
     `);
 });
 let fontSize = 20;
+// console.log(fontSize);
+// fontSize = parseInt(fontSize);
 $(`#zoom-in`).click(function() {
   fontSize++;
-  $(`#poemsaadi`).css(`font-size`,fontSize)
+  localStorage.setItem(`font-saadi`,`${fontSize}px`);
+  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
 })
 $(`#fullscreen`).click(function() {
   fontSize = 20;
-  $(`#poemsaadi`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`font-saadi`,`${fontSize}px`);
+  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
+});
 $(`#zoom-out`).click(function() {
   fontSize--;
-  $(`#poemsaadi`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`font-saadi`,`${fontSize}px`);
+  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
+});
 $(`.status-moon`).click(function() {
   $(`main`).css(`background-color`, `#0e2338`);
   $(`body`).css(`background-color`, `#484848`);
   $(`.status`).css(`color`, `white`);
   $(`.besmeAllah`).css(`color`, `white`);
   $(`.poem-text`).css(`color`, `white`);
-})
+});
 $(`.status-sun`).click(function() {
   $(`main`).css(`background-color`, `white`);
   $(`body`).css(`background-color`, `#3498db`);
   $(`.status`).css(`color`, `black`);
   $(`.besmeAllah`).css(`color`, `black`);
   $(`.poem-text`).css(`color`, `black`);
-})
+});
 $(window).scroll(function() {
   if($(this).scrollTop() > 500)
     $(`.btn-top`).fadeIn();
