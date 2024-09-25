@@ -1,6 +1,8 @@
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+$(`#poem-show`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+$(`#poemMolana`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 $(`#fal-result`).click(function () {
   let poem = rand(0, molana.length - 1);
   $(`#titleMolana`).html(`
@@ -64,19 +66,22 @@ $(`#prevMolana`).click(function () {
         ${molana[ghazal]["Book"]}<br>
     `);
 });
-let fontSize = 20;
+let fontSize = $(`#poemMolana`).css(`font-size`);
 $(`#zoom-in`).click(function() {
   fontSize++;
-  $(`#poemMolana`).css(`font-size`,fontSize)
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemMolana`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 })
 $(`#fullscreen`).click(function() {
   fontSize = 20;
-  $(`#poemMolana`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemMolana`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`#zoom-out`).click(function() {
   fontSize--;
-  $(`#poemMolana`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemMolana`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`.status-moon`).click(function() {
   $(`main`).css(`background-color`, `#0e2338`);
   $(`body`).css(`background-color`, `#484848`);
@@ -91,18 +96,22 @@ $(`.status-sun`).click(function() {
   $(`.besmeAllah`).css(`color`, `black`);
   $(`.poem-text`).css(`color`, `black`);
 })
+let fontSizeMolana = $(`#poem-show`).css(`font-size`);
 $(`#zoom-in`).click(function() {
-  fontSize++;
-  $(`#poem-show`).css(`font-size`,fontSize)
-})
+  fontSizeMolana++;
+  localStorage.setItem(`fontSize`,`${fontSizeMolana}px`);
+  $(`#poem-show`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`#fullscreen`).click(function() {
-  fontSize = 20;
-  $(`#poem-show`).css(`font-size`,fontSize)
-})
+  fontSizeMolana = 20;
+  localStorage.setItem(`fontSize`,`${fontSizeMolana}px`);
+  $(`#poem-show`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`#zoom-out`).click(function() {
-  fontSize--;
-  $(`#poem-show`).css(`font-size`,fontSize)
-})
+  fontSizeMolana--;
+  localStorage.setItem(`fontSize`,`${fontSizeMolana}px`);
+  $(`#poem-show`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(window).scroll(function() {
   if($(this).scrollTop() > 500)
     $(`.btn-top`).fadeIn();

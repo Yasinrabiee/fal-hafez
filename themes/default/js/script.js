@@ -35,7 +35,8 @@ $(`#fal`).click(function () {
    `);
   $(`.tools`).css(`visibility`,`visible`);
 });
-let show = localStorage.getItem(`next-prev`);
+// localStorage.setItem(`next-prev`,0)
+let show = 0;
 
 $(`#titleShow`).html(`
   ${hafez[show]["Title"]}<br>
@@ -45,16 +46,6 @@ $(`#poemShow`).html(`
   `);
 $(`#hafezShow`).html(`
  ${hafez[show]["Book"]}<br>
- `);
-
-$(`#titleShow`).html(`
-  ${hafez[localStorage.getItem(`next-prev`)]["Title"]}<br>
-  `);
-$(`#poemShow`).html(`
-  ${hafez[localStorage.getItem(`next-prev`)]["Poem"]["replaceAll"]("\n", `<br>`)}<br>
-  `);
-$(`#hafezShow`).html(`
- ${hafez[localStorage.getItem(`next-prev`)]["Book"]}<br>
  `);
 
 $(`#audio-ff`).attr(`src`,`${hafez[show]["Audio"]}`);
@@ -90,7 +81,6 @@ $(`#next`).click(function () {
    `);
   $(`#audio`).attr(`src`,`${hafez[show]["Audio"]}`);
   $(`#audio`).attr(`src`,`${hafez[show]["Audio-sgh"]}`);
-  localStorage.setItem(`next-prev`, show);
 });
 
 $(`#prev`).click(function () {
@@ -107,7 +97,6 @@ $(`#prev`).click(function () {
    `);
   $(`#audio`).attr(`src`,`${hafez[show]["Audio"]}`);
   $(`#audio`).attr(`src`,`${hafez[show]["Audio-sgh"]}`);
-  localStorage.setItem(`next-prev`, show);
 });
 
 $(`.status-moon`).click(function() {

@@ -1,3 +1,4 @@
+$(`#poemkhayam`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 let roba = 0;
 $(`#titlekhayam`).html(`
     ${khayam[roba]["Title"]}<br>
@@ -48,19 +49,22 @@ $(`#prevkhayam`).click(function () {
 	    ${khayam[roba]["Book"]}<br>
 	`);
 });
-let fontSize = 20;
+let fontSize = $(`#poemkhayam`).css(`font-size`);
 $(`#zoom-in`).click(function() {
   fontSize++;
-  $(`#poemkhayam`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemkhayam`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`#fullscreen`).click(function() {
   fontSize = 20;
-  $(`#poemkhayam`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemkhayam`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`#zoom-out`).click(function() {
   fontSize--;
-  $(`#poemkhayam`).css(`font-size`,fontSize)
-})
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemkhayam`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
+});
 $(`.status-moon`).click(function() {
   $(`main`).css(`background-color`, `#0e2338`);
   $(`body`).css(`background-color`, `#484848`);

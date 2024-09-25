@@ -1,5 +1,5 @@
 let ghazal = 0;
-$(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
+$(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 $(`#titlesaadi`).html(`
   ${saadi[ghazal]["Title"]}<br>
   `);
@@ -49,23 +49,23 @@ $(`#prevsaadi`).click(function () {
     ${saadi[ghazal]["Book"]}<br>
     `);
 });
-let fontSize = 20;
-// console.log(fontSize);
-// fontSize = parseInt(fontSize);
+let fontSize = $(`#poemsaadi`).css(`font-size`);
+console.log(fontSize);
+fontSize = parseInt(fontSize);
 $(`#zoom-in`).click(function() {
   fontSize++;
-  localStorage.setItem(`font-saadi`,`${fontSize}px`);
-  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 })
 $(`#fullscreen`).click(function() {
   fontSize = 20;
-  localStorage.setItem(`font-saadi`,`${fontSize}px`);
-  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 });
 $(`#zoom-out`).click(function() {
   fontSize--;
-  localStorage.setItem(`font-saadi`,`${fontSize}px`);
-  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`font-saadi`)}`);
+  localStorage.setItem(`fontSize`,`${fontSize}px`);
+  $(`#poemsaadi`).css(`font-size`,`${localStorage.getItem(`fontSize`)}`);
 });
 $(`.status-moon`).click(function() {
   $(`main`).css(`background-color`, `#0e2338`);
